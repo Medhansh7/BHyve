@@ -1,0 +1,19 @@
+.b{
+    background-image: url('../assets/head.jpg');
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc;
+    background-size: cover;
+    height: 660px;
+}
+
+.c{
+ padding-top: 120px;
+}
+
+button{
+    width: 120px;
+}
+
+.btn{
+    border-radius: 30px;
+}
