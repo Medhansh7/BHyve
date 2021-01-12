@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './styles.css'
 import Typist from 'react-typist';
 import { Link } from 'react-router-dom';
 
 
 export default function HomePage() {
-    var data = localStorage.getItem('token')
-    data = JSON.parse(data)
-    var token = data.accessToken;
+
+    const [token, setToken] = useState('');
+
+    useEffect(() => {
+
+        if (localStorage.getItem('token')) {
+            var data = localStorage.getItem('token')
+            data = JSON.parse(data)
+            setToken(data.accessToken);
+        } else {
+            setToken(false)
+        }
+    })
+
+
 
     return (
         <div className="b">
